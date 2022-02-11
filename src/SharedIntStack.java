@@ -50,13 +50,13 @@ public class SharedIntStack {
             if(ptr_a <= 0){
                 throw new EmptyIntStackException();
             } else {
-                return stk[ptr_a--];
+                return stk[--ptr_a];
             }
         } else if("b".equals(stkType)){
-            if(ptr_b >= max){
+            if(ptr_b >= max - 1){
                 throw new EmptyIntStackException();
             } else {
-                return stk[ptr_b++];
+                return stk[++ptr_b];
             }
         } else {
             throw new EmptyIntStackException();
@@ -71,7 +71,7 @@ public class SharedIntStack {
                 return stk[ptr_a - 1];
             }
         } else if("b".equals(stkType)){
-            if(ptr_b >= max){
+            if(ptr_b >= max - 1){
                 throw new EmptyIntStackException();
             } else {
                 return stk[ptr_b + 1];

@@ -34,7 +34,7 @@ public class IntStack {
             throw new EmptyIntStackException();
         }
 
-        return stk[ptr--];
+        return stk[--ptr];
     }
 
     public int peek() throws EmptyIntStackException {
